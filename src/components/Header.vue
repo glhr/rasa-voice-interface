@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-4 text-left">
 					<a href="https://rasa.com/" target="_blank">
-						<img id="header-logo" src="@/assets/icon/logo.png">
+						<img id="header-logo" src="@/assets/icon/lh7-logo.png">
 					</a>
 				</div>
 				<div class="col-4 text-middle"></div>
@@ -46,7 +46,8 @@ export default {
 	}
 
 	#header-logo {
-		height: 23px;
+		height: 100px;
+		margin: 30px;
 		display: block;
 	}
 

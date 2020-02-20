@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<a href="https://rasa.com/" target="_blank">
-			<img class="logo" src="@/assets/icon/logo.png">
+			<img class="logo" src="@/assets/icon/lh7-logo.png">
 		</a>
 		<p>
 			Want to experience it for yourself?
