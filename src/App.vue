@@ -52,7 +52,7 @@ import { mapGetters } from 'vuex';
 import MessageHandlerMixin from './mixins/MessageHandlerMixin';
 /* Components */
 import Chat from './components/Chat';
-import Footer from './components/VoiceFooter';
+import Footer from './components/Footer';
 import Header from './components/Header';
 /* Helpers */
 import generateUserId from './helpers';
