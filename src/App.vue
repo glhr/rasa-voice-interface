@@ -39,6 +39,7 @@
 		<Header v-if="chatStart"/>
 		<Chat />
 		<Footer v-if="inputVisible"/>
+		<VoiceFooter v-if="inputVisible"/>
 		<audio id="response-voice"
 			:src="getCurrentIncomingMessage.link"
 		/>
@@ -53,6 +54,7 @@ import MessageHandlerMixin from './mixins/MessageHandlerMixin';
 /* Components */
 import Chat from './components/Chat';
 import Footer from './components/Footer';
+import VoiceFooter from './components/VoiceFooter';
 import Header from './components/Header';
 /* Helpers */
 import generateUserId from './helpers';
@@ -62,6 +64,7 @@ export default {
 	components: {
 		Chat,
 		Footer,
+		VoiceFooter,
 		Header
 	},
 	mixins: [MessageHandlerMixin],

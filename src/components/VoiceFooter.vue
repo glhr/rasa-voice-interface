@@ -1,6 +1,6 @@
 <template>
 	<!-- Footer: Input field + button -->
-	<footer>
+	<div class="voice-footer">
 		<audio class="sound-clips"></audio>
 		<canvas id="sound-visualizer" width="100%" height="300px">
 		</canvas>
@@ -21,7 +21,7 @@
 				<button class="start-button btn" @click="stopRecording()">PAUSE</button>
 			</div>
 		</transition>
-	</footer>
+	</div>
 </template>
 
 <script>
@@ -34,7 +34,7 @@ import MessageHandlerMixin from '../mixins/MessageHandlerMixin';
 import '@/assets/lib/vad';
 
 export default {
-	name: 'Footer',
+	name: 'VoiceFooter',
 	mixins: [MessageHandlerMixin],
 	data() {
 		return {
@@ -242,7 +242,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app footer {
+#app .voice-footer {
 	margin-top: 30px;
 	background: #fff;
 	position: relative;
@@ -267,7 +267,7 @@ export default {
 		font-size: 11pt;
 		color: #fff;
 		position: absolute;
-		top: -37.5px;
+		top: -300px;
 		left: calc(50% - 37.5px);
 		width: 75px;
 		height: 75px;
@@ -293,8 +293,8 @@ export default {
 	#sound-visualizer{
 		position: absolute;
 		width: 100%;
-		height: 300px;
-		top: -300px;
+		height: 200px;
+		top: -600px;
 	}
 }
 </style>

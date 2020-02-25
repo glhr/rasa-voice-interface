@@ -2,9 +2,9 @@
 	<!-- Footer: Input field + button -->
 	<transition name="fade" mode="out-in">
 		<footer v-show="inputVisible" :class="inputVisible ? 'footer-send active' : 'footer-send'">
-			<div v-if="!chatStart">
+			<!-- <div v-if="!chatStart">
 				<button class="start-button btn" @click="startChat()">START</button>
-			</div>
+			</div> -->
 			<div v-if="chatStart">
 				<form class="container-fluid" style="height: 100%" @submit.prevent="submitMessage(currentInput)">
 					<div class="row" style="height: 100%">
@@ -61,8 +61,9 @@ export default {
 		}
 	},
 	mounted() {
-		console.log('FOCUSING');
-		this.$refs.text_input.focus();
+		this.$watch('inputVisible', function() {
+                this.$refs.text_input.$input.focus();
+  	});
 	},
 	methods: {
 		startChat() {
@@ -101,28 +102,28 @@ export default {
 		border-radius: 32px;
 	}
 
-	.start-button {
-		font-size: 11pt;
-		color: #fff;
-		position: absolute;
-		top: -37.5px;
-		left: calc(50% - 37.5px);
-		width: 75px;
-		height: 75px;
-		border-radius: 37.5px;
-		border: none;
-		box-shadow: -10px -10px 15px rgba(123, 1, 188, 1) inset,
-			-1px -1px 15px rgba(0, 0, 0, 0.8);
-		background: rgb(187,133,216);
-		background: -moz-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
-		background: -webkit-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
-		background: linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
-		filter: progid:DXImageTransform.Microsoft.gradient(
-			startColorstr="#bb85d8",
-			endColorstr="#7b01bc",
-			GradientType=1
-		);
-	}
+	// .start-button {
+	// 	font-size: 11pt;
+	// 	color: #fff;
+	// 	position: absolute;
+	// 	top: -37.5px;
+	// 	left: calc(50% - 37.5px);
+	// 	width: 75px;
+	// 	height: 75px;
+	// 	border-radius: 37.5px;
+	// 	border: none;
+	// 	box-shadow: -10px -10px 15px rgba(123, 1, 188, 1) inset,
+	// 		-1px -1px 15px rgba(0, 0, 0, 0.8);
+	// 	background: rgb(187,133,216);
+	// 	background: -moz-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+	// 	background: -webkit-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+	// 	background: linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+	// 	filter: progid:DXImageTransform.Microsoft.gradient(
+	// 		startColorstr="#bb85d8",
+	// 		endColorstr="#7b01bc",
+	// 		GradientType=1
+	// 	);
+	// }
 
 	#send-message-button {
 		height: 35px;
