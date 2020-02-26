@@ -70,7 +70,7 @@ export default {
 	mixins: [MessageHandlerMixin],
 	data() {
 		return {
-			welcomeMessage: 'Hi Daddy <3',
+			welcomeMessage: 'Hi Human <3',
 			displayNewMesssage: true,
 			audio: undefined
 		};

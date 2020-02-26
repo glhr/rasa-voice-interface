@@ -18,7 +18,7 @@ export default new Vuex.Store({
 		currentActiveData: initialActiveData,
 		allMessages: [
 			{
-				text: 'Hi Daddy',
+				text: 'Hi Human',
 				method: 'in',
 				iconStyle: 'none',
 				format: 'message'
