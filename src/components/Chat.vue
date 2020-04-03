@@ -81,7 +81,7 @@ export default {
 
 			.content-wrapper {
 				padding-bottom: 32px;
-				padding-top: 32px;
+				padding-top: 10px;
 
 				.qr-wrapper {
 					margin-top: 32px;

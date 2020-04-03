@@ -19,11 +19,12 @@ export default {
 <style lang="scss" scoped>
 .image-wrapper {
 	width: 100%;
-	margin-top: 15px;
+	margin-top: 0px;
 	margin-bottom: 15px;
 
 	.image-main {
 		max-width: 100%;
+		max-height: 300px;
 	}
 }
 </style>

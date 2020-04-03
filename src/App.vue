@@ -123,7 +123,7 @@ export default {
 						this.$store.commit('removeOldIncomingMessage');
 						this.displayNewMesssage = true;
 						this.$store.commit('setRecordingAvalibility', false);
-					}, 5000);
+					}, 2000);
 				}
 			} else {
 				setTimeout(() => {

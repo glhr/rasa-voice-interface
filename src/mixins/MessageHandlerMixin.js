@@ -9,11 +9,11 @@ const MessageHandlerMixin = {
 			/* Send message to the bot if it isn't empty */
 			if (text && text.length >= 1 && text.replace(/\s/g, '').length !== 0) {
 			/* Append to array of messages (so that it gets rendered to the screen) */
+				this.$store.commit('addOutgoingMessage', { text: this.currentInput });
 				console.log('type:', typeof (text));
 				// console.log('text:', text);
-				this.$store.commit('emptyIncomingMessage');
-				this.$store.commit('addOutgoingMessage', { text: this.currentInput });
 				this.$socket.emit('user_uttered', { message: text, room: this.userId });
+				this.$store.commit('emptyIncomingMessage');
 			} else if (typeof (text) === 'object') {
 				console.log('type:', typeof (text));
 				this.$store.commit('emptyIncomingMessage');
